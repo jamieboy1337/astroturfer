@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "ts-out",
+    "module": "CommonJS",
+    "target": "ES2015",
+    "baseUrl": ".",
+    "paths": { 
+      "@hingler-party/*": ["./hingler-party/*"]
+    }
+  },
+
+  "exclude": [
+    "./*/cypress/**/*",
+    "./ts-out/*",
+    "**/*/sw.ts"
+  ]
+}

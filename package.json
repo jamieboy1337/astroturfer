@@ -1,0 +1,19 @@
+{
+  "name": "astroturfer",
+  "version": "1.0.0",
+  "description": "a terrain sculpting tool with import/export capability to a .terrain file (TBD)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamieboy1337/astroturfer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamieboy1337/astroturfer/issues"
+  },
+  "homepage": "https://github.com/jamieboy1337/astroturfer#readme"
+}

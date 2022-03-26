@@ -4,7 +4,11 @@
   "description": "a terrain sculpting tool with import/export capability to a .terrain file (TBD)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && rm -rf ./client/js && rm -rf ./ts-out && tsc && npx webpack && node hingler-party/copyProjectResources.ts client && node hingler-party/copyProjectResources.ts ./test && cp -r hingler-party/test/data ./test/data",
+    "start": "node ./ts-out/server/index.js",
+    "clean": "rm -rf test/browser/js && rm -rf client/js && rm -rf test/data",
+    "deep-clean": "rm -rf node_modules && rm -rf package-lock.json && npm run clean && npm install",
+    "test": "mocha ./ts-out/hingler-party/test/*"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,14 @@
   "bugs": {
     "url": "https://github.com/jamieboy1337/astroturfer/issues"
   },
-  "homepage": "https://github.com/jamieboy1337/astroturfer#readme"
+  "homepage": "https://github.com/jamieboy1337/astroturfer#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "hingler-online": "file:hingler-party"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.0",
+    "@types/express": "^4.17.13",
+    "@types/mocha": "^8.2.3"
+  }
 }

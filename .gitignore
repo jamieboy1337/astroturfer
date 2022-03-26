@@ -7,3 +7,5 @@ client/js
 
 test/data
 test/engine
+
+.DS_Store
